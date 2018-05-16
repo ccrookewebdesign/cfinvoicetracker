@@ -24,7 +24,7 @@
 		upsertSuccess = cfcClient.upsertClient(form);
 
 		if (upsertSuccess eq "true") {
-			location(url="/clients/?success=1", addToken="#request.addToken#");
+			location(url="/clients/?success=1", addToken=request.addToken);
 		} else {
 			varError = upsertSuccess;
 		}

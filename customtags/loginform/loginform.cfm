@@ -1,6 +1,6 @@
 <cfscript>
   param name="attributes.redirectPage" default="";
-  param name="attributes.action" default="#cgi.script_name#";
+  param name="attributes.action" default=cgi.script_name;
   param name="attributes.buttonText" default="Login";
 
   varError = "";
@@ -17,7 +17,7 @@
         cfcUserLogin = new cfcs.cfcUser();
 
         if (cfcUserLogin.loginUser(form.password)) {
-          location(url="#attributes.redirectPage#", addToken="#request.addToken#");
+          location(url=attributes.redirectPage, addToken=request.addToken);
         } else {
           varError = "Login failed";
         }

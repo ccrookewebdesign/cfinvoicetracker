@@ -28,15 +28,15 @@ component displayName="user" {
   private query function loginUserQuery(required string pwd)
     description="boilerplate for login query" {
 
-    objLoginUser = new Query(datasource="#request.dsn#");    
+    objLoginUser = new Query(datasource=request.dsn);    
     
     objLoginUser.setSQL("
       SELECT u.id, u.name
       FROM inv_users u
-      WHERE u.password =  :password
+      WHERE u.password = :password
     ");
     
-    objLoginUser.addParam(name="password",value="#trim(arguments.pwd)#",CFSQLTYPE="CF_SQL_STRING");
+    objLoginUser.addParam(name="password",value=trim(arguments.pwd),CFSQLTYPE="CF_SQL_STRING");
 
     return objLoginUser.execute().getResult();
   }

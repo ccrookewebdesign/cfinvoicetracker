@@ -17,7 +17,7 @@ component displayName="cfcClient" {
         WHERE c.id = :id
       ");
     
-    objClient.addParam(name="id",value="#trim(arguments.id)#",CFSQLTYPE="CF_SQL_STRING");
+    objClient.addParam(name="id",value=trim(arguments.id),CFSQLTYPE="CF_SQL_STRING");
 
     return objClient.execute().getResult(); 
 
@@ -26,7 +26,7 @@ component displayName="cfcClient" {
   public query function getClients() 
     description="query database for all clients" {
 
-    return new Query(datasource="#request.dsn#")
+    return new Query(datasource=request.dsn)
       .setSQL("
         SELECT c.id, c.name, c.contact, c.email, c.phone
         FROM inv_clients c
@@ -68,7 +68,7 @@ component displayName="cfcClient" {
             WHERE id = :id
           ");
 
-        objClient.addParam(name="id",value="#trim(arguments.client.id)#",CFSQLTYPE="CF_SQL_STRING");  
+        objClient.addParam(name="id",value=trim(arguments.client.id),CFSQLTYPE="CF_SQL_STRING");  
       
       } else {
       
@@ -85,10 +85,10 @@ component displayName="cfcClient" {
         objClient.addParam(name="id",value=CreateUUID(),CFSQLTYPE="CF_SQL_STRING");  
       }
       
-      objClient.addParam(name="name",value="#trim(arguments.client.name)#",CFSQLTYPE="CF_SQL_STRING");
-      objClient.addParam(name="contact",value="#trim(arguments.client.contact)#",CFSQLTYPE="CF_SQL_STRING");
-      objClient.addParam(name="email",value="#trim(arguments.client.email)#",CFSQLTYPE="CF_SQL_STRING");
-      objClient.addParam(name="phone",value="#trim(arguments.client.phone)#",CFSQLTYPE="CF_SQL_STRING");
+      objClient.addParam(name="name",value=trim(arguments.client.name),CFSQLTYPE="CF_SQL_STRING");
+      objClient.addParam(name="contact",value=trim(arguments.client.contact),CFSQLTYPE="CF_SQL_STRING");
+      objClient.addParam(name="email",value=trim(arguments.client.email),CFSQLTYPE="CF_SQL_STRING");
+      objClient.addParam(name="phone",value=trim(arguments.client.phone),CFSQLTYPE="CF_SQL_STRING");
     
       objClient.execute();
 

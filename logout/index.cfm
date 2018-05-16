@@ -4,5 +4,5 @@
   cfcUser = new cfcs.cfcUser();
   cfcUser.logoutUser();
  
-  location( url="#redirectPage#", addToken="#request.addToken#" );
+  location( url=redirectPage, addToken=request.addToken );
 </cfscript>

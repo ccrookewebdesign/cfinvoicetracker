@@ -17,7 +17,7 @@
     <cfscript>
       param name="redirectPage" default="/";
       cfimport( taglib="/customTags/loginform", prefix="login" );
-      login:loginform( redirectPage="#redirectPage#" );
+      login:loginform( redirectPage=redirectPage );
     </cfscript>
   </div>
 </body>
