@@ -1,0 +1,153 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: #5c6174;
+}
+.color-highlight {
+  color: #ffffff;
+}
+.color-dark {
+  color: #5c6174;
+}
+.background-color-dark {
+  background-color: #5c6174;
+}
+.color-medium {
+  color: #acb1bf;
+}
+.background-color-medium {
+  background-color: #acb1bf;
+}
+.color-light {
+  color: #ffffff;
+}
+
+.success {
+  color: #068b0d;
+  font-weight: bold;
+}
+
+.error {
+  color: #f5c904;
+  font-weight: bold;
+  text-decoration: italic;
+}
+
+.mb25 {
+  margin-bottom: 25px;
+}
+
+.container {
+  max-width: 960px;
+}
+
+div.content-container {
+  margin-top: 20px !important;
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.site-banner {
+  background-color: #5c6174;
+  height: 34px;
+}
+
+.site-banner a {
+  color: #fff;
+  padding-left: 5px;
+  transition: ease-in-out color 0.15s;
+}
+
+.site-banner a:hover {
+  color: #acb1bf;
+  text-decoration: none;
+}
+
+.site-banner a.active {
+  color: #acb1bf;
+}
+
+.site-header {
+  background-color: rgba(248, 248, 248, 1);
+  height: 50px;
+}
+
+.site-header a {
+  color: #313131;
+  border-bottom: 3px solid transparent;
+  transition: ease-in-out color 0.15s;
+}
+
+.site-header a:hover {
+  color: #acb1bf;
+  border-bottom: 3px solid #5c6174;
+} /* acb1bf */
+
+.banner-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.red {
+  color: #c13600;
+}
+
+.header-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: uppercase;
+  color: #313131;
+}
+
+.header-container .logo {
+  font-size: 34px;
+}
+
+nav.breadcrumb-nav {
+  height: 35px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+container.breadcrumb-container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+ol.breadcrumb {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+li.breadcrumb-item a {
+  color: #878787;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
